@@ -1,3 +1,4 @@
+let currentData = [];
 const loadData = async () => {
   const response = await fetch(
     "https://openapi.programming-hero.com/api/videos/categories"
@@ -35,6 +36,7 @@ const categoryClickHandler = async (category, id) => {
   console.log(category, id);
 
   const categoryData = data.data;
+  currentData = categoryData;
   displayInCards(categoryData);
 
   for (let tab of tabs) {
@@ -109,6 +111,7 @@ const defaultCardDisplay = async () => {
     `https://openapi.programming-hero.com/api/videos/category/1000`
   );
   const data = await response.json();
+  currentData = data.data;
 
   displayInCards(data.data);
 };
@@ -129,4 +132,12 @@ const secondConvert = (second) => {
       : ""
   } ${second ? "ago" : ""}`;
 };
+
+const sortHandler = () => {
+  currentData.sort(
+    (a, b) => parseInt(b.others.views) - parseInt(a.others.views)
+  );
+  displayInCards(currentData);
+};
+
 loadData();

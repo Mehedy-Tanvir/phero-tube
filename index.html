@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -53,7 +53,7 @@
             tabindex="0"
             class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
-            <li><a>Sort by view</a></li>
+            <li onclick="sortHandler()"><a>Sort by view</a></li>
             <li><a>Blog</a></li>
           </ul>
         </div>
@@ -62,6 +62,7 @@
         </button>
         <button
           class="btn normal-case bg-[#25252533] rounded py-[10px] px-[20px] text-[#252525] text-[18px] font-medium hidden md:block"
+          onclick="sortHandler()"
         >
           Sort by view
         </button>
