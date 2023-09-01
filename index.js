@@ -48,6 +48,15 @@ const displayInCards = (data) => {
   console.log(data);
   const cardContainer = document.getElementById("card-container");
   cardContainer.innerHTML = "";
+  const noData = document.getElementById("no-data");
+  noData.innerHTML = "";
+  if (data.length === 0) {
+    noData.innerHTML = `<img class="w-[140px] h-[140px]" src="./Icon.png" alt="" srcset="" />
+      <h1 class="text-[#171717] text-[32px] font-bold text-center mt-[32px]">
+        Oops!! Sorry, There is no content here
+      </h1>`;
+  }
+
   data.forEach((item) => {
     let time = item.others.posted_date;
     const div = document.createElement("div");
