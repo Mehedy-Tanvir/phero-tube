@@ -17,6 +17,11 @@ const displayCategory = (categories) => {
     tab.setAttribute("onclick", "categoryClickHandler(this)");
     tabContainerEl.appendChild(tab);
   });
+  tabContainerEl.children[0].classList.remove(
+    "bg-[#25252526]",
+    "text-[#252525B3]"
+  );
+  tabContainerEl.children[0].classList.add("bg-[#FF1F3D]", "text-white");
 };
 const categoryClickHandler = (category) => {
   const tabs = category.parentNode.children;
