@@ -124,13 +124,9 @@ const secondConvert = (second) => {
 
   return `${years ? `${years} ${years > 1 ? "years" : "year"}` : ""} ${
     days ? `${days} ${days > 1 ? "days" : "day"}` : ""
-  } ${hours ? `${hours} ${hours > 1 ? "hours" : "hour"}` : ""} ${
-    minutes ? `${minutes} minutes` : ""
-  } ${
-    remainingSeconds
-      ? `${remainingSeconds} ${remainingSeconds > 1 ? "seconds" : "second"}`
-      : ""
-  } ${second ? "ago" : ""}`;
+  } ${hours ? `${hours} ${hours > 1 ? "hrs" : "hr"}` : ""} ${
+    minutes ? `${minutes} ${minutes > 1 ? "mins" : "min"}` : ""
+  }  ${second ? "ago" : ""}`;
 };
 
 const sortHandler = () => {

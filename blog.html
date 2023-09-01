@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PH Tube</title>
+    <!-- tailwind and daisy cdn  -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- custom css -->
+    <style>
+      .font-inter {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="font-inter">
+    <header>
+      <!-- nav section starts -->
+      <div
+        class="navbar bg-base-100 container flex justify-between items-center mx-auto border-b border-[#17175120] md:pt-[51px] md:pb-[34px]"
+      >
+        <div class="dropdown md:hidden">
+          <label tabindex="0" class="btn btn-ghost btn-circle">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h7"
+              />
+            </svg>
+          </label>
+          <ul
+            tabindex="0"
+            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+          >
+            <li><a href="./blog.html">Blog</a></li>
+          </ul>
+        </div>
+        <a href="./index.html">
+          <button class="btn btn-ghost">
+            <img src="./Logo.png" alt="" srcset="" /></button
+        ></a>
+        <a href="./blog.html">
+          <button
+            class="btn normal-case bg-[#FF1F3D] rounded py-[10px] px-[20px] text-white text-[18px] font-medium hover:text-[#FF1F3D] hidden md:block"
+          >
+            Blog
+          </button>
+        </a>
+      </div>
+    </header>
+    <main></main>
+    <footer></footer>
+  </body>
+</html>
