@@ -39,7 +39,6 @@ const categoryClickHandler = async (category, id) => {
     `https://openapi.programming-hero.com/api/videos/category/${id}`
   );
   const data = await response.json();
-  console.log(category, id);
 
   const categoryData = data.data;
   currentData = categoryData;
@@ -55,7 +54,6 @@ const categoryClickHandler = async (category, id) => {
   loading(isLoaded);
 };
 const displayInCards = (data) => {
-  console.log(data);
   const cardContainer = document.getElementById("card-container");
   cardContainer.innerHTML = "";
   const noData = document.getElementById("no-data");
