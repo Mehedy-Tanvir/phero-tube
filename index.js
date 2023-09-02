@@ -139,7 +139,7 @@ const secondConvert = (second) => {
 
 const sortHandler = () => {
   currentData.sort(
-    (a, b) => parseInt(b.others.views) - parseInt(a.others.views)
+    (a, b) => parseFloat(b.others.views) - parseFloat(a.others.views)
   );
   displayInCards(currentData);
 };
