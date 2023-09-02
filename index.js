@@ -113,7 +113,7 @@ const displayInCards = (data) => {
              
             <p class="text-[#171717B3] text-[14px] font-normal">${
               item.others.views
-            } Views</p>
+            } views</p>
             </div>
           </div>`;
     cardContainer.appendChild(div);
