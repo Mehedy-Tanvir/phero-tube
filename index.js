@@ -1,5 +1,7 @@
 let currentData = [];
+let isLoaded = false;
 const loadData = async () => {
+  loading(isLoaded);
   const response = await fetch(
     "https://openapi.programming-hero.com/api/videos/categories"
   );
@@ -7,6 +9,8 @@ const loadData = async () => {
   const categories = data.data;
   displayCategory(categories);
   defaultCardDisplay();
+  isLoaded = true;
+  loading(isLoaded);
 };
 const displayCategory = (categories) => {
   const tabContainerEl = document.getElementById("tab");
@@ -28,6 +32,8 @@ const displayCategory = (categories) => {
   tabContainerEl.children[0].classList.add("bg-[#FF1F3D]", "text-white");
 };
 const categoryClickHandler = async (category, id) => {
+  isLoaded = false;
+  loading(isLoaded);
   const tabs = category.parentNode.children;
   const response = await fetch(
     `https://openapi.programming-hero.com/api/videos/category/${id}`
@@ -45,6 +51,8 @@ const categoryClickHandler = async (category, id) => {
   }
   category.classList.remove("bg-[#25252526]", "text-[#252525B3]");
   category.classList.add("bg-[#FF1F3D]", "text-white");
+  isLoaded = true;
+  loading(isLoaded);
 };
 const displayInCards = (data) => {
   console.log(data);
@@ -134,6 +142,15 @@ const sortHandler = () => {
     (a, b) => parseInt(b.others.views) - parseInt(a.others.views)
   );
   displayInCards(currentData);
+};
+
+const loading = (isLoaded) => {
+  const loadingSpinner = document.getElementById("loading-spinner");
+  if (isLoaded) {
+    loadingSpinner.classList.add("hidden");
+  } else {
+    loadingSpinner.classList.remove("hidden");
+  }
 };
 
 loadData();
