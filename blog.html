@@ -26,7 +26,7 @@
       }
     </style>
   </head>
-  <body class="font-inter">
+  <body class="font-inter container mx-auto">
     <header>
       <!-- nav section starts -->
       <div
@@ -69,7 +69,134 @@
         </a>
       </div>
     </header>
-    <main></main>
+    <main>
+      <!-- blog section started -->
+      <div class="container p-2 mb-[100px]">
+        <h1 class="text-[#FF1F3D] text-center font-bold text-[26px] mt-[14px]">
+          Blog
+        </h1>
+        <div class="">
+          <h2 class="text-[#171717] font-bold text-[16px] mt-[24px]">
+            Discuss the scope of 'var', 'let', and 'const'.
+          </h2>
+          <p class="text-[#171717B3] text-[14px] font-normal mt-[8px]">
+            'var', 'let', and 'const' are used to declare variables in
+            javascript. These variable declaration have different scopes and
+            behaviors. Different scopes and behaviors of this variable
+            declaration is discussed below.
+          </p>
+          <p class="text-[#171717B3] text-[14px] font-normal mt-[8px]">
+            <span class="text-[#171717] font-bold">'var':</span> Variables
+            declared with "var" are function scoped. They can not be accessed
+            outside of the function, they can only be accessed in the function
+            where they are declared. <br />
+            "var" shows hoisting property this means we can access the "var"
+            variable before declaring. "var" variable is hoisted on top of the
+            function where it is declared or global scope. When hoisted If we
+            try to access "var" before assigning any value, the value will be
+            undefined.
+          </p>
+          <p class="text-[#171717B3] text-[14px] font-normal mt-[8px]">
+            <span class="text-[#171717] font-bold">'let':</span> Variables
+            declared with "let" are block-scoped. Which means they can only be
+            accessed in the block (inside curly braces) where they are declared.
+            <br />
+            "let" doesn't show hoisting property this means we can not access
+            the "let" variable before declaring.
+          </p>
+          <p class="text-[#171717B3] text-[14px] font-normal mt-[8px]">
+            <span class="text-[#171717] font-bold">'const':</span> Variables
+            declared with "const" are block-scoped. Which means they can only be
+            accessed in the block (inside curly braces) where they are declared.
+            <br />
+            "const" contains constant values. We can not change the assigned
+            value of "const". If we try to change the assigned value of const it
+            will throw an error.
+            <br />
+            "const" doesn't show hoisting property this means we can not access
+            the "const" variable before declaring.
+          </p>
+          <p class="text-[#171717B3] text-[14px] font-normal mt-[8px]">
+            <span class="text-[#171717] font-bold">In summary</span> "var" is
+            function scoped where "let" and "const" are block scoped. We can
+            reassign values of "let" and "var" variables but we can not reassign
+            values of "const" variables. "var" variables show hoisting behaviors
+            where "let" and "const" variables do not show hoisting behaviors.
+          </p>
+          <h2 class="text-[#171717] font-bold text-[16px] mt-[24px]">
+            Tell us the use cases of null and undefined.
+          </h2>
+          <p class="text-[#171717B3] text-[14px] font-normal mt-[8px]">
+            "null" and "undefined" are two distinct values that are used in
+            different cases in javascript. Use cases of "null" and "undefined"
+            are given below.
+          </p>
+          <p class="text-[#171717B3] text-[14px] font-normal mt-[8px]">
+            <span class="text-[#171717] font-bold">'null':</span><br />
+            1. "null" is often used to represent intentional absence of any
+            value of an object or any value that is known to be explicitly
+            empty. <br />
+            2. We can set object value to "null" which explicitly indicates that
+            it has no value or cleared. <br />
+            3. We can use "null" in error handling by setting value to "null"
+            when the value is absent or unavailable.
+          </p>
+          <p class="text-[#171717B3] text-[14px] font-normal mt-[8px]">
+            <span class="text-[#171717] font-bold">'undefined':</span><br />
+            1. Not assigning value in the variables and trying to access the
+            value of variables will give "undefined" value.<br />
+            2. Trying to access the value from a function which doesn't return
+            anything will give "undefined" value.<br />
+            3. If we do not set values to arguments of a function, missing
+            arguments values will be "undefined". <br />
+            4. If return has nothing on the right side it will return
+            "undefined" value. <br />
+            5. If a property is missing in an object than the value of that
+            property will be "undefined". <br />
+            6. Accessing the array elements outside of index will give
+            "undefined" value. <br />
+            7. Trying to access the Deleted value of an array by index will give
+            "undefined" value. <br />
+          </p>
+          <h2 class="text-[#171717] font-bold text-[16px] mt-[24px]">
+            What do you mean by REST API?
+          </h2>
+          <p class="text-[#171717B3] text-[14px] font-normal mt-[8px]">
+            API stands for Application Programming Interface. Where REST API
+            stands for Representational State Transfer Application Programming
+            Interface. An API or Application Programming Interface is set of
+            rules of how devices can connect and communicate with each other. In
+            case of REST API, for connecting and communicating with other each
+            other they follow representational state transfer architectural
+            style. REST API contains six design principles. <br />
+            <span class="text-[#171717] font-bold">1. Uniform interface:</span>
+            All API requests for the same resource should look the same, no
+            matter where the request comes from. <br />
+            <span class="text-[#171717] font-bold"
+              >2. Client-server decoupling:</span
+            >
+            In REST API design, client and server applications must be
+            completely independent of each other. <br />
+            <span class="text-[#171717] font-bold">3. Statelessness:</span>
+            REST APIs are stateless, meaning that each request needs to include
+            all the information necessary for processing it. <br />
+            <span class="text-[#171717] font-bold">4. Cacheability:</span>
+            When possible, resources should be cacheable on the client or server
+            side. <br />
+            <span class="text-[#171717] font-bold"
+              >5. Layered system architecture:</span
+            >
+            In REST APIs, the calls and responses go through different
+            layers.<br />
+            <span class="text-[#171717] font-bold">6. Code on demand:</span>
+            REST APIs usually send static resources, but in certain cases,
+            responses can also contain executable code (such as Java applets).
+            In these cases, the code should only run on-demand.
+          </p>
+        </div>
+      </div>
+      <!-- blog section ends -->
+    </main>
     <footer></footer>
   </body>
 </html>
