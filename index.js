@@ -76,11 +76,16 @@ const displayInCards = (data) => {
             <img class="h-[200px] w-[312px]" src=${
               item.thumbnail
             } alt="Shoes" />
-            <p
-              class="text-white bg-[#171717] text-[10px] font-normal py-[4px] px-[5px] rounded absolute bottom-[16px] right-[16px]"
-            >
-              ${secondConvert(time)}
-            </p>
+            ${
+              time.length > 0
+                ? ` <p
+            class="text-white bg-[#171717] text-[10px] font-normal py-[4px] px-[5px] rounded absolute bottom-[16px] right-[16px]"
+          >
+            ${secondConvert(time)}
+          </p>`
+                : ""
+            }
+           
           </figure>
 
           <div class="flex gap-[12px] mt-[20px]">
